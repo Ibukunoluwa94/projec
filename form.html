@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #3EB489;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            text-align: justify;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #3EB489;
+            color: white;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Contact Us</h1>
+    </header>
+
+    <section>
+        <p>Have a question or want to get in touch? Fill out the form below, and we'll get back to you as soon as
+            possible.</p>
+
+        <form action="process_contact_form.php" method="post">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <input type="submit" value="Submit">
+        </form>
+    </section>
+    <script defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
+  <style>
+    #map {
+      height: 400px;
+      width: 100%;
+    }
+  </style>
+  <script>
+    function initMap() {
+      // Set the coordinates for the map center
+      const mapCenter = { lat: 37.7749, lng: -122.4194 };
+
+      // Create a new map object
+      const map = new google.maps.Map(document.getElementById('map'), {
+        center: mapCenter,
+        zoom: 12 // Adjust the zoom level as needed
+      });
+
+      // Add a marker to the map
+      const marker = new google.maps.Marker({
+        position: mapCenter,
+        map: map,
+        title: 'Hello World!'
+      });
+    }
+  </script>
+
+</body>
+
+</html>
